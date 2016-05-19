@@ -44,7 +44,8 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password,
+    #area追加済み
+    params.require(:user).permit(:name, :email, :area, :profile, :password,
                                  :password_confirmation)
   end
   
