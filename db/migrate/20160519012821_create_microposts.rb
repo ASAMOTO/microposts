@@ -5,6 +5,7 @@ class CreateMicroposts < ActiveRecord::Migration
       t.text :content
 
       t.timestamps null: false
+      t.index [:user_id, :created_at] #ここを追加した
     end
   end
 end
