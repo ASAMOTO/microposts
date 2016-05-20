@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :microposts #ここを追加
+  resources :relationships, only: [:create, :destroy]
 end
