@@ -14,9 +14,15 @@
     <%= render 'follow_form' if logged_in? %>
     <% if @user.microposts.any? %>
       <h3>Microposts (<%= @user.microposts.count %>)</h3>
+      <!-- 追加箇所開始 -->
+      <%= page_entries_info @microposts %>
+      <!-- 追加箇所終了 -->
       <ol class="microposts">
         <%= render @microposts %>
       </ol>
+      <!-- 追加箇所開始 -->
+      <%= will_paginate @microposts %>
+      <!-- 追加箇所終了 -->
       <% end %>
   </div>
 </div>
